@@ -90,13 +90,14 @@
 
 - Entrant
 - Administrator
+- Role
 
 
 ### Class: Notification  
 
 ##### Responsibilities
 
-- Sends info to users
+- Holds notification data
 
 ##### Collaborators
 
@@ -115,3 +116,69 @@
 
 - Entrants
 - Organizer
+
+
+### Class: LotteryService
+
+###### Responsibilities
+
+- Randomly select N entrants from the waiting list 
+- re-draw if someone declines
+
+###### Collaborators
+
+- Event
+- WaitingList
+- Entrant
+- Notification
+
+
+### Class: Role
+
+###### Responsibilities
+
+- Parent class for Entrant, Organizer, Admin
+
+###### Collaborators
+
+- Entrant
+- Organizer
+- Admin
+- User
+
+
+### Class: QRCode
+
+###### Responsibilities
+
+- Link to Event, Generate URL
+
+###### Collaborators
+
+- Event
+- Organizer
+- User
+
+
+### Class: NotificationService
+
+###### Responsibilities
+
+- sends push notifications
+
+###### Collaborators
+
+- Notification
+- User
+
+
+### Class: Payment
+
+###### Responsibilities
+
+- Track payment status
+
+###### Collaborators
+
+- Event
+- User
